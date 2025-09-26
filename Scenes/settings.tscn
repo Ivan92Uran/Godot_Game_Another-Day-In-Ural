@@ -1,0 +1,316 @@
+[gd_scene load_steps=25 format=3 uid="uid://dfqxnuta1c0fq"]
+
+[ext_resource type="Texture2D" uid="uid://c1wdomqawwg4" path="res://Backgrounds/background_pix.jpg" id="1_cj1lu"]
+[ext_resource type="Script" uid="uid://dvmqqk043n1ol" path="res://Scripts/Menu_Zombie.gd" id="2_71mqq"]
+[ext_resource type="Texture2D" uid="uid://doddephnagxrl" path="res://Sprites/Walk.png" id="3_3j6r5"]
+[ext_resource type="Script" uid="uid://nqu3oeuin6cg" path="res://Scripts/alien_menu.gd" id="4_3lj6o"]
+[ext_resource type="Texture2D" uid="uid://b320uki4r0dqj" path="res://Sprites/Shot_Alien.png" id="5_6mhpt"]
+[ext_resource type="Script" uid="uid://bolaxqs4jduln" path="res://Scripts/back_button.gd" id="6_6kysc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gskb3"]
+atlas = ExtResource("3_3j6r5")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfxsx"]
+atlas = ExtResource("3_3j6r5")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmjc0"]
+atlas = ExtResource("3_3j6r5")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ne548"]
+atlas = ExtResource("3_3j6r5")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ig5px"]
+atlas = ExtResource("3_3j6r5")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40ul6"]
+atlas = ExtResource("3_3j6r5")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whgli"]
+atlas = ExtResource("3_3j6r5")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0i6mm"]
+atlas = ExtResource("3_3j6r5")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnwcd"]
+atlas = ExtResource("3_3j6r5")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lhbt"]
+atlas = ExtResource("3_3j6r5")
+region = Rect2(1152, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gt1mr"]
+atlas = ExtResource("3_3j6r5")
+region = Rect2(1280, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5w572"]
+atlas = ExtResource("3_3j6r5")
+region = Rect2(1408, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ohexs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gskb3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vfxsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmjc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ne548")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ig5px")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40ul6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whgli")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0i6mm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnwcd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lhbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gt1mr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5w572")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64yqt"]
+atlas = ExtResource("5_6mhpt")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7d48"]
+atlas = ExtResource("5_6mhpt")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6i2pj"]
+atlas = ExtResource("5_6mhpt")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7rcf"]
+atlas = ExtResource("5_6mhpt")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1k4ii"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64yqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7d48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6i2pj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7rcf")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[node name="Settings" type="Node2D"]
+
+[node name="Settings_Menu" type="Node2D" parent="."]
+
+[node name="Menu_background" type="ParallaxBackground" parent="Settings_Menu"]
+
+[node name="background" type="Sprite2D" parent="Settings_Menu/Menu_background"]
+position = Vector2(1197, 536)
+scale = Vector2(0.500231, 0.500231)
+texture = ExtResource("1_cj1lu")
+
+[node name="Zombie_Menu" type="CharacterBody2D" parent="Settings_Menu"]
+script = ExtResource("2_71mqq")
+
+[node name="Zombie" type="AnimatedSprite2D" parent="Settings_Menu/Zombie_Menu"]
+position = Vector2(1701, 574)
+scale = Vector2(6.51563, 6.51563)
+sprite_frames = SubResource("SpriteFrames_ohexs")
+animation = &"Idle"
+
+[node name="Alien_Menu" type="CharacterBody2D" parent="Settings_Menu"]
+script = ExtResource("4_3lj6o")
+
+[node name="Alien" type="AnimatedSprite2D" parent="Settings_Menu/Alien_Menu"]
+position = Vector2(276, 557)
+scale = Vector2(7.07031, 7.07031)
+sprite_frames = SubResource("SpriteFrames_1k4ii")
+animation = &"Idle"
+
+[node name="Interface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 729.0
+offset_top = 6.0
+offset_right = 769.0
+offset_bottom = 46.0
+
+[node name="Buttons" type="Control" parent="Interface"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Save" type="Button" parent="Interface/Buttons"]
+offset_left = 780.0
+offset_top = 884.0
+offset_right = 1040.0
+offset_bottom = 1003.0
+theme_override_font_sizes/font_size = 50
+text = "Save"
+
+[node name="Back" type="Button" parent="Interface/Buttons"]
+offset_left = -576.0
+offset_top = 885.0
+offset_right = -316.0
+offset_bottom = 1006.0
+theme_override_font_sizes/font_size = 50
+text = "Back"
+script = ExtResource("6_6kysc")
+
+[node name="Slider" type="Control" parent="Interface"]
+layout_mode = 1
+anchor_right = 2.888
+anchor_bottom = 21.634
+offset_right = -75.52
+offset_bottom = -825.36
+
+[node name="General_Sound" type="VSlider" parent="Interface/Slider"]
+offset_left = -465.0
+offset_top = 238.0
+offset_right = -376.0
+offset_bottom = 696.0
+step = 5.0
+value = 100.0
+
+[node name="Music" type="VSlider" parent="Interface/Slider"]
+layout_mode = 0
+offset_left = -301.0
+offset_top = 234.0
+offset_right = -252.0
+offset_bottom = 691.0
+step = 5.0
+value = 50.0
+
+[node name="VSlider" type="VSlider" parent="Interface/Slider"]
+layout_mode = 0
+offset_left = -168.0
+offset_top = 237.0
+offset_right = -144.0
+offset_bottom = 695.0
+step = 5.0
+
+[node name="Lable" type="Control" parent="Interface"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Settings" type="Label" parent="Interface/Lable"]
+offset_right = 566.0
+offset_bottom = 164.0
+theme_override_colors/font_color = Color(0.638884, 1.29953e-06, 2.40654e-07, 1)
+theme_override_font_sizes/font_size = 120
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sound" type="Label" parent="Interface/Lable"]
+offset_left = -361.0
+offset_top = 159.0
+offset_right = -188.0
+offset_bottom = 235.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 75
+text = "Sound"
+
+[node name="General" type="Label" parent="Interface/Lable"]
+layout_mode = 0
+offset_left = -493.0
+offset_top = 692.0
+offset_right = -344.0
+offset_bottom = 769.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "General"
+
+[node name="Music" type="Label" parent="Interface/Lable"]
+layout_mode = 0
+offset_left = -331.0
+offset_top = 694.0
+offset_right = -219.0
+offset_bottom = 799.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Music
+"
+
+[node name="Effects" type="Label" parent="Interface/Lable"]
+layout_mode = 0
+offset_left = -210.0
+offset_top = 696.0
+offset_right = -75.0
+offset_bottom = 747.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Effects"
+
+[node name="Intetface_setting" type="Label" parent="Interface/Lable"]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 154.0
+offset_right = 677.0
+offset_bottom = 230.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 75
+text = "Interface"
+
+[node name="CheckButtons" type="Control" parent="Interface"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Full_immersion" type="CheckButton" parent="Interface/CheckButtons"]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 239.0
+offset_right = 711.0
+offset_bottom = 298.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Full immersion"
+
+[node name="Displaying_help" type="CheckButton" parent="Interface/CheckButtons"]
+layout_mode = 0
+offset_left = 387.0
+offset_top = 299.0
+offset_right = 712.0
+offset_bottom = 358.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Displaying Help"

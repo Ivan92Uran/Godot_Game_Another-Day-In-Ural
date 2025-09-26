@@ -1,0 +1,225 @@
+[gd_scene load_steps=26 format=3 uid="uid://b47j2jnycy6ow"]
+
+[ext_resource type="Texture2D" uid="uid://c1wdomqawwg4" path="res://Backgrounds/background_pix.jpg" id="1_77tbn"]
+[ext_resource type="Script" uid="uid://dvmqqk043n1ol" path="res://Scripts/Menu_Zombie.gd" id="2_gskb3"]
+[ext_resource type="Texture2D" uid="uid://doddephnagxrl" path="res://Sprites/Walk.png" id="2_i7qwh"]
+[ext_resource type="Script" uid="uid://nqu3oeuin6cg" path="res://Scripts/alien_menu.gd" id="4_hmjc0"]
+[ext_resource type="Texture2D" uid="uid://b320uki4r0dqj" path="res://Sprites/Shot_Alien.png" id="5_ne548"]
+[ext_resource type="Script" uid="uid://c2tjwn4kq4bmq" path="res://Scripts/settings_Button.gd" id="6_gfdgk"]
+[ext_resource type="Script" uid="uid://cqabp1lr1l6lb" path="res://Scripts/exit_Button.gd" id="6_ne548"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gskb3"]
+atlas = ExtResource("2_i7qwh")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vfxsx"]
+atlas = ExtResource("2_i7qwh")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmjc0"]
+atlas = ExtResource("2_i7qwh")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ne548"]
+atlas = ExtResource("2_i7qwh")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ig5px"]
+atlas = ExtResource("2_i7qwh")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_40ul6"]
+atlas = ExtResource("2_i7qwh")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whgli"]
+atlas = ExtResource("2_i7qwh")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0i6mm"]
+atlas = ExtResource("2_i7qwh")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fnwcd"]
+atlas = ExtResource("2_i7qwh")
+region = Rect2(1024, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3lhbt"]
+atlas = ExtResource("2_i7qwh")
+region = Rect2(1152, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gt1mr"]
+atlas = ExtResource("2_i7qwh")
+region = Rect2(1280, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5w572"]
+atlas = ExtResource("2_i7qwh")
+region = Rect2(1408, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_64yqt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gskb3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vfxsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmjc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ne548")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ig5px")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_40ul6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_whgli")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0i6mm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fnwcd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3lhbt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gt1mr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5w572")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64yqt"]
+atlas = ExtResource("5_ne548")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7d48"]
+atlas = ExtResource("5_ne548")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6i2pj"]
+atlas = ExtResource("5_ne548")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7rcf"]
+atlas = ExtResource("5_ne548")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xu8af"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64yqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7d48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6i2pj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7rcf")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}]
+
+[node name="Menu" type="Node2D"]
+
+[node name="Main_Menu" type="Node2D" parent="."]
+
+[node name="Menu_background" type="ParallaxBackground" parent="Main_Menu"]
+
+[node name="background" type="Sprite2D" parent="Main_Menu/Menu_background"]
+position = Vector2(1197, 536)
+scale = Vector2(0.500231, 0.500231)
+texture = ExtResource("1_77tbn")
+
+[node name="Zombie_Menu" type="CharacterBody2D" parent="Main_Menu"]
+script = ExtResource("2_gskb3")
+
+[node name="Zombie" type="AnimatedSprite2D" parent="Main_Menu/Zombie_Menu"]
+position = Vector2(1701, 574)
+scale = Vector2(6.51563, 6.51563)
+sprite_frames = SubResource("SpriteFrames_64yqt")
+animation = &"Idle"
+frame_progress = 0.721756
+
+[node name="Alien_Menu" type="CharacterBody2D" parent="Main_Menu"]
+script = ExtResource("4_hmjc0")
+
+[node name="Alien" type="AnimatedSprite2D" parent="Main_Menu/Alien_Menu"]
+position = Vector2(276, 557)
+scale = Vector2(7.07031, 7.07031)
+sprite_frames = SubResource("SpriteFrames_xu8af")
+animation = &"Idle"
+frame_progress = 0.773224
+
+[node name="Interface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ADIU" type="Label" parent="Interface"]
+layout_mode = 0
+offset_left = 658.0
+offset_top = 164.0
+offset_right = 1267.0
+offset_bottom = 409.0
+theme_override_colors/font_color = Color(0.638884, 1.29953e-06, 2.40654e-07, 1)
+theme_override_font_sizes/font_size = 120
+text = "Another Day 
+In Ural"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="New_Game" type="Button" parent="Interface"]
+layout_mode = 0
+offset_left = 788.0
+offset_top = 627.0
+offset_right = 1114.0
+offset_bottom = 707.0
+theme_override_font_sizes/font_size = 50
+text = "New Game"
+
+[node name="Сontinuation" type="Button" parent="Interface"]
+layout_mode = 0
+offset_left = 791.0
+offset_top = 539.0
+offset_right = 1116.0
+offset_bottom = 620.0
+theme_override_font_sizes/font_size = 50
+text = "Сontinuation"
+
+[node name="Settings" type="Button" parent="Interface"]
+layout_mode = 0
+offset_left = 787.0
+offset_top = 716.0
+offset_right = 1114.0
+offset_bottom = 795.0
+theme_override_font_sizes/font_size = 50
+text = "Settings"
+script = ExtResource("6_gfdgk")
+
+[node name="Exit" type="Button" parent="Interface"]
+layout_mode = 0
+offset_left = 786.0
+offset_top = 803.0
+offset_right = 1114.0
+offset_bottom = 883.0
+theme_override_font_sizes/font_size = 50
+text = "Exit"
+script = ExtResource("6_ne548")
