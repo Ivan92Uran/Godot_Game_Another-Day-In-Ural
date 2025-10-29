@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b47j2jnycy6ow"]
+[gd_scene load_steps=27 format=3 uid="uid://b47j2jnycy6ow"]
 
 [ext_resource type="Texture2D" uid="uid://c1wdomqawwg4" path="res://Backgrounds/background_pix.jpg" id="1_77tbn"]
 [ext_resource type="Script" uid="uid://dvmqqk043n1ol" path="res://Scripts/Menu_Zombie.gd" id="2_gskb3"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b320uki4r0dqj" path="res://Sprites/Shot_Alien.png" id="5_ne548"]
 [ext_resource type="Script" uid="uid://c2tjwn4kq4bmq" path="res://Scripts/settings_Button.gd" id="6_gfdgk"]
 [ext_resource type="Script" uid="uid://cqabp1lr1l6lb" path="res://Scripts/exit_Button.gd" id="6_ne548"]
+[ext_resource type="Script" uid="uid://6letvvsyx8f0" path="res://Scripts/new_game_button.gd" id="6_r0rks"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gskb3"]
 atlas = ExtResource("2_i7qwh")
@@ -194,6 +195,7 @@ offset_right = 1114.0
 offset_bottom = 707.0
 theme_override_font_sizes/font_size = 50
 text = "New Game"
+script = ExtResource("6_r0rks")
 
 [node name="Сontinuation" type="Button" parent="Interface"]
 layout_mode = 0
