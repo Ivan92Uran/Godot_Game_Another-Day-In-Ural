@@ -136,6 +136,7 @@ animations = [{
 }]
 
 [node name="Settings" type="Node2D"]
+process_mode = 3
 
 [node name="Settings_Menu" type="Node2D" parent="."]
 

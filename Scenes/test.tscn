@@ -1,5 +1,6 @@
-[gd_scene load_steps=41 format=3 uid="uid://bm8umumlruanr"]
+[gd_scene load_steps=42 format=3 uid="uid://bm8umumlruanr"]
 
+[ext_resource type="Script" uid="uid://dk3351gc21cle" path="res://Scripts/Overlay.gd" id="1_5wyu1"]
 [ext_resource type="Texture2D" uid="uid://droicmb4tv7mv" path="res://Sprites/Трова.png" id="1_lc1oi"]
 [ext_resource type="Texture2D" uid="uid://dy6230lvuphsv" path="res://Sprites/HMMJumpBare.png" id="2_35xla"]
 [ext_resource type="Script" uid="uid://cojroi288va0q" path="res://Scripts/character_body_2d.gd" id="2_i3aeo"]
@@ -256,6 +257,7 @@ animations = [{
 size = Vector2(44, 195.75)
 
 [node name="Test" type="Node2D"]
+script = ExtResource("1_5wyu1")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(8, 707)
@@ -278,6 +280,7 @@ position = Vector2(1880, 170)
 shape = SubResource("RectangleShape2D_ys1qc")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+process_mode = 3
 position = Vector2(208, 625)
 script = ExtResource("2_i3aeo")
 
